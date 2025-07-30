@@ -1,0 +1,30 @@
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  width: 200px;
+}
+
+.errorInput {
+  border-color: var(--danger);
+}
+
+.errorMessage {
+  color: var(--danger);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

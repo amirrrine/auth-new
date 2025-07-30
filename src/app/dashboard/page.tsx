@@ -1,22 +1,22 @@
-// src/app/dashboard/page.tsx
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function DashboardPage() {
   const router = useRouter();
+  const [isAuthorized, setIsAuthorized] = useState(false);
 
   useEffect(() => {
-    const auth = localStorage.getItem("auth");
-    if (!auth) {
+    const user = localStorage.getItem("user");
+    if (!user) {
       router.push("/login");
+    } else {
+      setIsAuthorized(true);
     }
   }, [router]);
 
-  return (
-    <main className="container">
-      <h1>Welcome to the Dashboard</h1>
-    </main>
-  );
+  if (!isAuthorized) return <p>Loading...</p>;
+
+  return <h1 className="text-allign= center">Welcome to the Dashboard</h1>;
 }
