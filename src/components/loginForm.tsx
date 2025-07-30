@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import Input from "@/ui/Input";
 import Button from "@/ui/Button";
-import styles from "./loginForm.module.scss"; // optional
+import styles from "./loginForm.module.scss";
 
 const schema = z.object({
   phone: z

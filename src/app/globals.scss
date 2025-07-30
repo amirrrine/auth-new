@@ -17,7 +17,6 @@
   }
 }
 
-/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +31,6 @@ body {
   line-height: 1.6;
 }
 
-/* Shared Input Styles */
 input {
   padding: 0.5rem;
   border: 1px solid #ccc;
@@ -58,14 +56,12 @@ label {
   margin-bottom: 0.25rem;
 }
 
-/* Error message styling */
 .error-message {
   color: var(--danger);
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
 
-/* Button Styles */
 button {
   background-color: var(--primary);
   color: white;
@@ -81,7 +77,6 @@ button:hover {
   background-color: var(--primary-hover);
 }
 
-/* Container utility class */
 .container {
   max-width: 480px;
   margin: 0 auto;
