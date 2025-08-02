@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "@/app/globals.scss";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Login Auth App",
-  description: "Simple login page with redirect to dashboard",
+  title: "LoginAuth",
+  description: "login page with redirect to dashboard",
 };
 
 export default function RootLayout({
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Toaster position="top-center" reverseOrder={false} />
+      </body>
     </html>
   );
 }

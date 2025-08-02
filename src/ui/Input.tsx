@@ -1,4 +1,5 @@
-import React, { forwardRef, InputHTMLAttributes } from "react";
+import React, { forwardRef, InputHTMLAttributes, useEffect } from "react";
+import toast from "react-hot-toast";
 import styles from "./input.module.scss";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -7,12 +8,23 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, error, ...rest }, ref) => {
+  ({ label, error, className, ...rest }, ref) => {
+    useEffect(() => {
+      if (error) {
+        toast.error(error);
+      }
+    }, [error]);
+
     return (
       <div className={styles.inputGroup}>
         {label && <label>{label}</label>}
-        <input ref={ref} {...rest} className={error ? styles.errorInput : ""} />
-        {error && <p className={styles.errorMessage}>{error}</p>}
+        <input
+          ref={ref}
+          {...rest}
+          className={`${styles.input} ${error ? styles.errorInput : ""} ${
+            className ?? ""
+          }`}
+        />
       </div>
     );
   }

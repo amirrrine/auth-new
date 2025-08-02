@@ -11,6 +11,7 @@
   font-size: 1rem;
   transition: border-color 0.2s;
   width: 200px;
+  padding-bottom: 5px;
 }
 
 .errorInput {
@@ -18,13 +19,27 @@
 }
 
 .errorMessage {
-  color: var(--danger);
   font-size: 0.875rem;
-  margin-top: 0.25rem;
+  font-weight: 500;
+  color: var(--foreground);
 }
+
 .form {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  border: #131313;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  border: 1px solid #434242;
+  border-radius: var(--radius);
+  background-color: #434242;
+  padding: 5px;
 }

@@ -18,5 +18,5 @@ export default function DashboardPage() {
 
   if (!isAuthorized) return <p>Loading...</p>;
 
-  return <h1 className="text-allign= center">Welcome to the Dashboard</h1>;
+  return <h1>Welcome to the Dashboard!</h1>;
 }
