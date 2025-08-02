@@ -52,6 +52,7 @@ export default function LoginForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
       <div className={styles.card}>
+        <h1 className="text">Wellcome!</h1>
         <Input
           label="Phone Number"
           placeholder="09123456789"

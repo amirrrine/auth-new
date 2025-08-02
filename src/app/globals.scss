@@ -2,19 +2,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+
   --primary: #0070f3;
   --primary-hover: #0059c1;
   --danger: #e00;
   --radius: 4px;
   --font-base: "Inter", sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 * {
@@ -49,7 +42,6 @@ input.error {
   border-color: var(--danger);
 }
 
-/* Label Styling */
 label {
   font-weight: 600;
   display: block;
@@ -82,7 +74,7 @@ button:hover {
   margin: 0 auto;
   padding: 2rem 1rem;
 }
-h1 {
+.text {
   display: flex;
   justify-content: center;
   align-items: center;
